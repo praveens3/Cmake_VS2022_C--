@@ -13,7 +13,7 @@ Then walks you through setting up CMake 3.30 in Visual Studio Code (VSCode) or y
 - **CMake 3.30**: Ensure you have CMake 3.30 or later installed.
 - **VSCode**: Install Visual Studio Code and the [CMake Tools Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools).
 - **Visual Studio 2022**: Ensure you have Visual Studio 2022 installed for targeting.
-- **conan 2.x**: Ensure you have installed with conana version greatter than 2.0. ```bash pip install conan==<version> ```
+- **Conan 2.x**: Ensure you have installed with conana version greatter than 2.0. ```pip install conan==<version>```
 ---
 
 ## Steps
@@ -60,6 +60,12 @@ From the list, choose either vs2022-debug or vs2022-release, depending on whethe
      ```bash
      conan install . --build=missing --output-folder=build
      ```
+     
+4. **Add the package deps to `CMakeLists.txt`**
+   ```bash
+   find_package(spdlog REQUIRED)
+   target_link_libraries(testpro PRIVATE spdlog::spdlog)
+   ```
 
 ### Step 6: Build the Project
 With your target selected, you can now build the project using the CMake extension:
