@@ -38,7 +38,7 @@ Now that your environment is set, you’ll need to choose which build target to 
 Press Ctrl+Shift+P and type >CMake: Set Build Target.
 From the list, choose either vs2022-debug or vs2022-release, depending on whether you're debugging or building a release version of your project.
 
-## Download Third-Party Packages and Link with Project Using CMake
+## Download Third-Party packages and link the TP lib with project using CMake
 
 ### The Package Manager Used Here is Conan 2.0
 
