@@ -23,7 +23,7 @@ Then walks you through setting up CMake 3.30 in Visual Studio Code (VSCode) or y
 In your project directory, create a file named `CMakeLists.txt` and add with your project's configuration details.
 
 ### Step 2. Create `CMakePresets.txt`
-In your project directory, create a file named `CMakePresets.txt` and add with your project's configuration details.
+In your project directory, create a file named `CMakePresets.txt` and add with your configuration preset's and build preset's details.
 
 ### Step 3. Run `Set_Build` with build targets
 Run the build with your desired target
