@@ -18,12 +18,39 @@ Then walks you through setting up CMake 3.30 in Visual Studio Code (VSCode) or y
 
 ## Steps
 
-### 1. Create `CMakeLists.txt`
+### Step 1. Create `CMakeLists.txt`
 
 In your project directory, create a file named `CMakeLists.txt` and add with your project's configuration details.
 
-### 2. Create `CMakePresets.txt`
+### Step 2. Create `CMakePresets.txt`
 In your project directory, create a file named `CMakePresets.txt` and add with your project's configuration details.
 
-### 3. Run `Set_Build` with build targets
+### Step 3. Run `Set_Build` with build targets
 Run the build with your desired target
+
+### Step 4: Enable CMake Extension in VSCode
+Open Visual Studio Code.
+Press Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (macOS) to open the Command Palette.
+Type >Reload Window and hit enter. This reloads the VSCode window and ensures that the CMake extension is ready.
+
+### Step 5: Set the Build Target
+Now that your environment is set, you’ll need to choose which build target to work with.
+Press Ctrl+Shift+P and type >CMake: Set Build Target.
+From the list, choose either vs2022-debug or vs2022-release, depending on whether you're debugging or building a release version of your project.
+
+### Step 6: Build the Project
+With your target selected, you can now build the project using the CMake extension:
+Open the CMake Tools sidebar.
+Click on Build to start compiling your project.
+
+   Alternatively, Generate Build Files: Run CMake to generate build files:
+   cmake --preset <preset-name>
+   Ex: cmake --preset vs2022-debug
+
+### Step 7: Check the Build Directory
+Finally, navigate to the build directory to verify your build files have been generated as expected.
+you can open .sln by visual studio IDE and build the project
+
+   Alternately, Build the Project: Build your project:
+   cmake --build build --preset <preset-name>
+   Ex: cmake --build build --preset build-debug
