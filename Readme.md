@@ -13,7 +13,7 @@ Then walks you through setting up CMake 3.30 in Visual Studio Code (VSCode) or y
 - **CMake 3.30**: Ensure you have CMake 3.30 or later installed.
 - **VSCode**: Install Visual Studio Code and the [CMake Tools Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools).
 - **Visual Studio 2022**: Ensure you have Visual Studio 2022 installed for targeting.
-
+- **conan 2.x**: Ensure you have installed with conana version greatter than 2.0. ```bash pip install conan==<version> ```
 ---
 
 ## Steps
@@ -67,13 +67,17 @@ Open the CMake Tools sidebar.
 Click on Build to start compiling your project.
 
    Alternatively, Generate Build Files: Run CMake to generate build files:
+   ```bash
    cmake --preset <preset-name>
    Ex: cmake --preset vs2022-debug
+   ```
 
 ### Step 7: Check the Build Directory
 Finally, navigate to the build directory to verify your build files have been generated as expected.
 you can open .sln by visual studio IDE and build the project
 
    Alternately, Build the Project: Build your project:
+   ```bash
    cmake --build build --preset <preset-name>
    Ex: cmake --build build --preset build-debug
+   ```
