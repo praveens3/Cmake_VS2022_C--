@@ -6,14 +6,14 @@
         "description": "Debug configuration with Visual Studio 2022",
         "hidden": false,
         "generator": "Visual Studio 17 2022",
-        "binaryDir": "${sourceDir}/prebuild"
+        "binaryDir": "${sourceDir}/build"
       },
       {
         "name": "vs2022-release",
         "description": "Release configuration with Visual Studio 2022",
         "hidden": false,
         "generator": "Visual Studio 17 2022",
-        "binaryDir": "${sourceDir}/prebuild"
+        "binaryDir": "${sourceDir}/build"
       }
     ],
     "buildPresets": [

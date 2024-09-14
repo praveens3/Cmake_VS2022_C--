@@ -13,3 +13,13 @@ set_property(TARGET testpro PROPERTY CXX_STANDARD 11)
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/Debug/x64") not working
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/Release/x64") not working
 
+#for Download conan package in Terminal/cmd promt
+# conan install . --build=missing --output-folder=build -s build_type=Debug //for debug
+# conan install . --build=missing --output-folder=build // for release
+
+# Add the path where spdlog-config.cmake is located
+# Replace /path/to/spdlog-config with the actual path to your spdlog installation
+set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};${CMAKE_BINARY_DIR}/generators/")
+
+find_package(spdlog REQUIRED)
+target_link_libraries(testpro PRIVATE spdlog::spdlog)
