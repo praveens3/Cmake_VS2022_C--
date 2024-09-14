@@ -38,6 +38,29 @@ Now that your environment is set, you’ll need to choose which build target to 
 Press Ctrl+Shift+P and type >CMake: Set Build Target.
 From the list, choose either vs2022-debug or vs2022-release, depending on whether you're debugging or building a release version of your project.
 
+## Download Third-Party Packages and Link with Project Using CMake
+
+### The Package Manager Used Here is Conan 2.0
+
+1. **Install Conan**  
+   Ensure you have Conan version 2.0 or higher installed.
+
+2. **Create `conanfile.txt`**  
+   Add the needed packages. For example, add the `spdlog` library.
+
+3. **Build the Package**  
+   Use the following commands to install and build the packages:
+
+   - For Debug Build:
+     ```bash
+     conan install . --build=missing --output-folder=build -s build_type=Debug
+     ```
+
+   - For Release Build:
+     ```bash
+     conan install . --build=missing --output-folder=build
+     ```
+
 ### Step 6: Build the Project
 With your target selected, you can now build the project using the CMake extension:
 Open the CMake Tools sidebar.
