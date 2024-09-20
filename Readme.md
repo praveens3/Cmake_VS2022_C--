@@ -1,4 +1,4 @@
-# Simple C++ Executable Project with CMake and Visual Studio 2022
+# Simple C++ Project with CMake and Visual Studio 2022
 
 ## Setting Up CMake 3.30 in Visual Studio Code
 
@@ -34,7 +34,7 @@ Press Ctrl+Shift+P and type >CMake: Set Build Target.
 From the list, choose either vs2022-debug or vs2022-release, depending on whether you're debugging or building a release version of your project.
 
 ---
-### Download Third-Party packages and link the TP lib with project using CMake
+### Download Third-Party packages and link the TP lib with project using CMake (Optional)
 ### The Package Manager Used Here is Conan 2.0
 
 1. **Install Conan**  
