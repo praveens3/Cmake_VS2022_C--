@@ -48,14 +48,16 @@ From the list, choose either vs2022-debug or vs2022-release, depending on whethe
 
    - For Debug Build:
      ```bash
-     conan install . --build=missing --output-folder=build -s build_type=Debug
+     conan install . --build=missing -s build_type=Debug
      ```
 
    - For Release Build:
      ```bash
-     conan install . --build=missing --output-folder=build
+     conan install . --build=missing
      ```
-     
+
+     to generate files in specific directory --output-folder=build
+
 4. **Add the package deps to `CMakeLists.txt`**
    ```bash
    find_package(spdlog REQUIRED)
